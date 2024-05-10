@@ -2,9 +2,9 @@ import streamlit as st
 import psycopg2
 def connect_to_db():
     conn = psycopg2.connect(
-        dbname="one",
-        user="ukaveti2",
-        password="110899",
+        dbname="VCT_database",
+        user="sai",
+        password="sai123",
         host="127.0.0.1"  # or your host address
     )
     return conn
@@ -13,7 +13,7 @@ def connect_to_db():
 def fetch_data():
     conn = connect_to_db()
     cur = conn.cursor()
-    cur.execute("select * from sai;")
+    cur.execute("select * from maps;")
     data = cur.fetchall()
     cur.close()
     conn.close()
