@@ -5,7 +5,7 @@ def connect_to_db():
         dbname="VCT_database",
         user="sai",
         password="sai123",
-        host="192.168.1.215"  # or your host address
+        host="127.0.0.1"  # or your host address
     )
     return conn
 
